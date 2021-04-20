@@ -8,6 +8,8 @@
 {% endif %}
 
 <form name='my form' action='.' method='POST'>
+    <label for='user_title'>標題：</label>
+    <input id='user_title' type='text' name='user_title'><br/>
     {% csrf_token %}
     <table>
     {{ post_form.as_table }}

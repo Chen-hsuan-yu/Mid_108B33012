@@ -14,6 +14,8 @@
     {% endfor %}
     <br/>
     心情留言板：<br/>
+    <label for='user_title'>標題：</label>
+    <input id='user_title' type='text' name='user_title'><br/>
     <textarea name='user_post' rows=3 cols=70></textarea><br/>
     <label for='user_id'>你的暱稱：</label>
     <input id='user_id' type='text' name='user_id'>
@@ -39,6 +41,8 @@ function go_delete(id){
     if (user_pass != "") {
         var usr = '/' + id + '/' + user_pass;
         window.location = usr;
+    }else{
+        alert("沒有輸入密碼")
     }
 }
 </script>
